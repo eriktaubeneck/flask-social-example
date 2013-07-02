@@ -1,4 +1,4 @@
-
+import os
 from flask import redirect, url_for, session
 from flask.ext.assets import Environment
 from flask.ext.security import Security, SQLAlchemyUserDatastore
@@ -15,6 +15,8 @@ app = Flask(__name__)
 app.config.from_yaml(app.root_path)
 app.config.from_heroku()
 app.wsgi_app = MethodRewriteMiddleware(app.wsgi_app)
+
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL') or ('sqlite:///' + os.path.join(app.root_path, '../app.db'))
 
 db = SQLAlchemy(app)
 webassets = Environment(app)
