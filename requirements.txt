@@ -6,10 +6,11 @@ Flask-OAuth==0.12
 Flask-Principal==0.4.0
 Flask-SQLAlchemy==0.15
 Flask-Script==0.3.2
-Flask-Security==1.5.2
+Flask-Security==1.6.9
 git+git://github.com/mattupstate/flask-social.git@develop
-Flask-WTF==0.8
-Jinja2==2.6
+Flask-WTF==0.9.3
+Jinja2==2.7.1
+MarkupSafe==0.18
 PyYAML==3.10
 SQLAlchemy==0.7.6
 WTForms==1.0.5
